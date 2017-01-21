@@ -14,7 +14,7 @@ if [ -n "$1" ]; then
   chmod 600 $domain/cert.key
 else
   openssl req -new -x509 -extensions v3_req -newkey rsa:8192 -nodes -days 3650 \
-    -subj "/O=/CN=/" \
+    -subj "/O=example.com/CN=*.example.com/subjectAltName=DNS:*.example.com/" \
     -out cert.pem -keyout cert.key
   openssl dhparam -out dhparam 2048
   chmod 600 cert.key
