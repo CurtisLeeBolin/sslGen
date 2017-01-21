@@ -1,4 +1,4 @@
 sslGen
 ======
 
-Just simple script to generate self signed ssl key/cert.
+Just a simple script to generate dhparam and self signed cert key and pem.
